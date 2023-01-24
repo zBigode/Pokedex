@@ -6,7 +6,7 @@
     padding: 10px;
 }
 
-.pokede-grid{
+.pokedex-grid{
     display: grid;
     gap:10;
     grid-template-columns: repeat(3, 1fr);

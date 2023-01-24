@@ -5,12 +5,13 @@ import './search.css'
 
 const Searchbar = () => {
 
-    const [search, setSearch] = useState('Charizard')
+    const [search, setSearch] = useState('bulbasaur')
     const [pokemon, setPokemon] = useState()
 
     //alterar o valor ao digitar
     const onChangeHandle = (e) => {
         setSearch(e.target.value)
+        
     }
 
     const onClickBtnHandle = () => {
@@ -31,10 +32,14 @@ const Searchbar = () => {
                 <button onClick={onClickBtnHandle}>Buscar</button>
             </div>
             {pokemon ? (
-                <div>
-                   <div>nome: {pokemon.name}</div>
-                   <div>peso: {pokemon.wight}</div>
+                <div className='pokemon-find-card'>
+                <div className='pokemon-find-info'>
+                   <div >nome: {pokemon.name}</div>
+                   <div >peso: {pokemon.weight}</div>
+                </div>
+                <div className='pokemon-find-img'>
                    <img src={pokemon.sprites.front_default} alt="info pokemon" />
+                </div>
                 </div>
 
             ) : null }
