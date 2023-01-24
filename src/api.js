@@ -1,11 +1,35 @@
 //api js vai exportar metodos que vai ser utilizado pela aplicacao. Esses metodos vao conversar com a api
 
-export const searchPokemon = async (pokemon) => {
 
-    //vai tentar fazer alguma coisa no bloco try e cas o de algum erro sera facil tratar
+//buscando pokemons na api pela pesquisa
+export const searchPokemon = async (pokemon) => {
 
     try {
         let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+        const response = await fetch(url)
+        return await response.json()
+    } catch (error) {
+        console.log("erro: ", error)
+    }
+}
+
+//buscando todos os pokemons da api 
+export const getPokemons = async (limit = 50, offset = 0) => {
+
+    try {
+        let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=&${offset}`
+        const response = await fetch(url)
+        return await response.json()
+    } catch (error) {
+        console.log("erro: ", error)
+    }
+}
+
+
+//obtendo os dados de cada pokemon
+export const getPokemonData = async (url) => {
+
+    try {
         const response = await fetch(url)
         return await response.json()
     } catch (error) {
