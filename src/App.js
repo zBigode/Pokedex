@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/navbar';
+import Pokedex from './components/pokedex';
 import Searchbar from './components/searchbar';
 
 
@@ -9,9 +10,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <div className="App">
-
-      </div>
+     <Pokedex />
     </div>
   );
 }

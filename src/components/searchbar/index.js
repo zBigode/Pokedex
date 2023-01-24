@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import { useState } from 'react'
 import { searchPokemon } from '../../api'
 import './search.css'
 
