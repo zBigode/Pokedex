@@ -8,6 +8,8 @@
 
 .pokedex-grid{
     display: grid;
-    gap:10;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+    grid-gap: 15px 15px;
+    margin-right: 8px;
+    margin-bottom: 15px;
 }

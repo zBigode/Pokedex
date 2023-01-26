@@ -38,7 +38,7 @@ function App() {
 
   return (
     
-    <div className='pl-2 pb-4 bg-slate-500'>
+    <div className='pl-2 pb-4 bg-slate-400'>
       <Navbar />
       <Searchbar />
      <Pokedex 
