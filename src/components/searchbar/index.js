@@ -1,44 +1,32 @@
-import { useState } from 'react'
-import { searchPokemon } from '../../api'
-import Pokemon from '../Pokemon'
-import './search.css'
+import { useState } from "react";
+import Pokemon from "../Pokemon";
+import "./search.css";
 
-
-const Searchbar = () => {
-
-    const [search, setSearch] = useState('bulbasaur')
-    const [pokemon, setPokemon] = useState()
-
-    //alterar o valor ao digitar
-    const onChangeHandle = (e) => {
-        setSearch(e.target.value)
-        
-        
+const Searchbar = (props) => {
+  const [search, setSearch] = useState("ditto");
+  const { onSearch } = props;
+  const onChangeHandler = (e) => {
+    setSearch(e.target.value);
+    if (e.target.value === 0) {
+      onSearch(undefined);
     }
+  };
 
-    const onClickBtnHandle = () => {
-        onSearchHandle(search)
-    }
+  const onClickBtnHandler = () => {
+    onSearch(search);
+  };
 
-    const onSearchHandle = async (pokemon) =>{
-        const result = await searchPokemon(pokemon)
-        setPokemon(result)
-        
-        }
+  
+  return (
+    <div className="searchbar-container">
+      <div className="searchbar">
+        <input placeholder="Buscar Pokemon" onChange={onChangeHandler} />
+      </div>
+      <div className="searchbar-btn">
+        <button onClick={onClickBtnHandler}>Buscar</button>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div className='searchbar-container'>
-            <div className='searchbar'>
-                <input placeholder='Buscar Pokemon'onChange={onChangeHandle}/></div>
-            <div className='searchbar-btn'>
-                <button onClick={onClickBtnHandle}>Buscar</button>
-            </div>
-            {pokemon ? (
-                <Pokemon />
-
-            ) : null }
-            </div>        
-    )
-}
-
-export default Searchbar
+export default Searchbar;

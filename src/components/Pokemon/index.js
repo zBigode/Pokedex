@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./pokemon.css";
 
 import Fundo from "../../assets/fundo.svg";
@@ -8,8 +8,12 @@ const Pokemon = (props) => {
     console.log("pode favoritar");
   };
 
-  const heart = "❤";
+  
 
+  
+
+  const heart = "❤";
+console.log(pokemon)
   return (
     <button className="pokemon-btn">
     <div className="card-container">
