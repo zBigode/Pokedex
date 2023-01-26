@@ -1,19 +1,20 @@
 import React from "react";
 import "./pokemon.css";
 
+import Fundo from '../../assets/fundo.svg'
 const Pokemon = (props) => {
   const { pokemon } = props;
   const onHeartClick = () => {
     console.log("pode favoritar");
   };
   const heart = "❤";
-
+console.log("pokemon", pokemon)
   return (
-    <div>
-      <div className="pokemon-card">
+   
+      <div className={`pokemon-card-${pokemon.types[0].type.name}`} style={{ backgroundImage: `url(${Fundo})`}}>
         <div className="pokemon-image-container">
-          <img alt={pokemon.name} src={pokemon.sprites.front_default} />
         </div>
+          <img alt={pokemon.name} src={pokemon.sprites.front_default} />
         <div className="card-body">
           <div className="card-top">
             <h3>{pokemon.name}</h3>
@@ -37,7 +38,7 @@ const Pokemon = (props) => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };
 export default Pokemon;
