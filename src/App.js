@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { getPokemonData, getPokemons } from './api';
+import './App.css'
 import Navbar from './components/navbar';
 import Pokedex from './components/pokedex';
 import Searchbar from './components/searchbar';
@@ -12,7 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [pokemons, setPokemons] = useState([])
 
-  const itensPerPage = 25
+  const itensPerPage = 27
 
   const fetchPokemons = async () =>{
     try {
@@ -36,7 +37,8 @@ function App() {
   }, [page]);
 
   return (
-    <div>
+    
+    <div className='pl-2 pb-4 bg-slate-500'>
       <Navbar />
       <Searchbar />
      <Pokedex 
