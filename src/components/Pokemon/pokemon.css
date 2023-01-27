@@ -1,5 +1,5 @@
-.pokemon-btn :hover{
-  opacity: 85% ;
+.pokemon-btn :hover {
+  opacity: 85%;
 }
 .imagem-fundo-pokemon {
   display: flex;
@@ -29,16 +29,16 @@
   justify-content: space-between;
   align-items: center;
 }
-.card-top h2{
-font-size: 30px;
-font-weight: bolder;
-}
-.card-top h3{
+.card-top h2 {
   font-size: 30px;
   font-weight: bolder;
-  color: rgb(204, 202, 202);
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);;
-  }
+}
+.card-top h3 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(226, 226, 226);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
 .pokemon-type {
   position: relative;
 }
@@ -67,7 +67,7 @@ font-weight: bolder;
   background-color: #8571be;
 }
 .pokemon-card-dragon {
-  background-color: #7383b9; 
+  background-color: #7383b9;
 }
 .pokemon-card-dark {
   background-color: #372d51;
@@ -82,7 +82,7 @@ font-weight: bolder;
   background-color: #8bbe8a;
 }
 .pokemon-card-poison {
-  background-color: #9f6e97; 
+  background-color: #9f6e97;
 }
 .pokemon-card-bug {
   background-color: #4c8e38;
