@@ -17,7 +17,7 @@ const Pokedex = (props) => {
     }
   };
   return (
-    <div>
+    <div className="pokedex-container">
       <div className="pokedex-header">
         <h1>Pokedex</h1>
         <Pagination

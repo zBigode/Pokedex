@@ -5,13 +5,13 @@
 }
 .pagination-container button {
   color: aliceblue;
-  font-size: 50px;
+  font-size: 30px;
   display: flex;
 }
 
 .btnsize {
   background-color: transparent;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: bolder;

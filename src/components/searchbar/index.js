@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./search.css";
 
 const Searchbar = (props) => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState();
   const { onSearch } = props;
 
   const onChangeHandler = (e) => {
-    const result = (e.target.value.replace(/[^a-z,0-9]/gi, ''));
+    const result = (e.target.value.toLowerCase().replace(/[^a-z,0-9]/gi, ''));
     setSearch(result)
     if (e.target.value.length === 0) {
       onSearch(undefined);

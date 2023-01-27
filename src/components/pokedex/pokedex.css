@@ -1,3 +1,9 @@
+.pokedex-container{
+    border: solid 3px;
+    border-radius: 15px;
+    margin-right: 9px;
+}
+
 .pokedex-header{
     display: flex;
     flex-direction: row;
@@ -10,6 +16,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, auto));
     grid-gap: 15px 15px;
-    margin-right: 8px;
+    margin: 8px;
     margin-bottom: 15px;
+    
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: yellow;
+    text-shadow: -1px 5px 0px rgb(35, 21, 118), 
+    -1px 5px 0px rgb(35, 21, 118),                    
+     -1px 5px 0px rgb(35, 21, 118),                  
+     -1px 5px 0px rgb(35, 21, 118);
 }
