@@ -1,12 +1,24 @@
 import "./pokemon.css";
 import Fundo from "../../assets/fundo.svg";
+
+import React, { useState } from "react";
+import ModalPokemon from "../../modal/modal";
+
+
 const Pokemon = (props) => {
   const { pokemon } = props;
+  const [open, setOpen] = useState(false);
 
 
+  function openModal(){
+   setOpen(true)
+  
+  }
+console.log(pokemon.stats)
+  
   return (
-    <button className="pokemon-btn">
-      <div className="card-container ">
+    <div className="card-container ">
+      <button onClick={() => openModal()} className="pokemon-btn">
         <div
           className={`pokemon-card-${pokemon.types[0].type.name}`}
           style={{
@@ -19,7 +31,8 @@ const Pokemon = (props) => {
             fontSize: "20px",
             boxShadow: "6px 6px 6px rgba(0, 0, 0, 0.5)",
             height: "200px",
-            width: "540px",
+            width: "600px",
+           
           }}
         >
           <img alt={pokemon.name} src={pokemon.sprites.front_default} />
@@ -28,7 +41,6 @@ const Pokemon = (props) => {
               <h3>{pokemon.name}</h3>
               <h2>#{pokemon.id}</h2>
             </div>
-            
             <div className="card-bottom">
               {pokemon.types.map((type, index) => {
                 return (
@@ -45,21 +57,27 @@ const Pokemon = (props) => {
                         marginRight: "6px",
                         display: "flex",
                         justifyContent: "center",
-                        color: "white"
+                        color: "white",
                       }}
                     >
                       {type.type.name}
                     </div>
                   </div>
                 );
-              })}            
+              })}
             </div>
-          
           </div>
         </div>
+        </button>
+        <div>
       </div>
-      </button>
-  
+          {open ? <div>
+           
+            <ModalPokemon closeModal={setOpen} name={pokemon.name} imagem={pokemon.sprites.front_default} pokemon={pokemon}/>
+            </div> 
+            : null
+            }
+        </div>
   );
 };
 export default Pokemon;

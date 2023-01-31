@@ -1,10 +1,11 @@
-import React from "react";
+
 import Pagination from "../pagination";
 import Pokemon from "../Pokemon";
 import "./pokedex.css";
 
 const Pokedex = (props) => {
   const { pokemons, loading, page, totalPages, setPage } = props;
+ 
 
   const onLeftClickHandler = () => {
     if (page > 0) {

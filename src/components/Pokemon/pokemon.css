@@ -1,14 +1,18 @@
 .pokemon-btn :hover {
   opacity: 85%;
+  border-radius: 25px;
+}
+.pokemon-btn{
+  border-radius: 25px;
 }
 .imagem-fundo-pokemon {
   display: flex;
 }
-.card-container {
-  flex-wrap: wrap;
+ .card-container {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
-}
+} 
 .pokemon-image {
   width: 70px;
   height: 70px;
@@ -17,9 +21,9 @@
   min-width: 50%;
 }
 .card-bottom {
-  position: relative;
+  /* position: relative;
   top: 50%;
-  left: 3%;
+  left: 3%; */
   display: flex;
   align-items: center;
 }
