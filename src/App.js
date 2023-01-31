@@ -52,12 +52,15 @@ function App() {
     setLoading(false);
   };
   return (
-    <div className="pl-2 pb-4 bg-slate-400">
+    <div className="pl-2 pb-4 bg-slate-400 ">
       <Navbar />
 
       <Searchbar onSearch={onSearchHandler} />
       {notFound ? (
-        <div>Não foi possivel encontrar o pokemon </div>
+
+        <div className="text-[25px] flex justify-center">Não foi possivel encontrar o pokemon </div>
+      
+        
       ) : (
         <Pokedex
           pokemons={pokemons}
