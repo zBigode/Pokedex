@@ -1,0 +1,116 @@
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.342);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  display: flex;
+}
+
+.modal-container {
+  margin: 1rem;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 700px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.pokemon-name {
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.pokemon-type-text {
+  text-transform: capitalize;
+}
+.pokemon-modal-fire {
+  background-image: linear-gradient(#eb4343 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-steel {
+  background-image: linear-gradient(#4c91b2 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-ice {
+  background-image: linear-gradient(#91d8df 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-fairy {
+  background-image: linear-gradient(#eba8c3 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-psychic {
+  background-image: linear-gradient(#ff6e68 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-rock {
+  background-image: linear-gradient(#6f6e78 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-ghost {
+  background-image: linear-gradient(#8571be 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-dragon {
+  background-image: linear-gradient(#7383b9 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-dark {
+  background-image: linear-gradient(#493f62 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-normal {
+  background-image: linear-gradient(#b5b9c4 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-water {
+  background-image: linear-gradient(#58abf6 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-grass {
+  background-image: linear-gradient(#8bbe8a 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-poison {
+  background-image: linear-gradient(#9f6e97 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-bug {
+  background-image: linear-gradient(#4c8e38 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-electric {
+  background-image: linear-gradient(#d9b549 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-fighting {
+  background-image: linear-gradient(#ff4971 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-ground {
+  background-image: linear-gradient(#f78551 10%, rgb(255, 255, 255));
+}
+.pokemon-modal-flying {
+  background-image: linear-gradient(#a98472 10%, rgb(255, 255, 255));
+}
+.stats-container {
+  background-color: green;
+}
+.moves-pokemon{
+  height: 30%;
+  overflow-y: scroll;
+
+}
+.moves-pokemon::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.moves-pokemon::-webkit-scrollbar-track {
+  background:transparent;
+}
+
+/* Handle */
+.moves-pokemon::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+.moves-pokemon::-webkit-scrollbar-thumb:hover {
+  background: #555;
+ 
+}

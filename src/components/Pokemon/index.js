@@ -1,8 +1,8 @@
 import "./pokemon.css";
 import Fundo from "../../assets/fundo.svg";
-
+import pokebola from "../../assets/pokebola.png"
 import React, { useState } from "react";
-import ModalPokemon from "../../modal/modal";
+import ModalPokemon from "../modal/modal";
 
 
 const Pokemon = (props) => {
@@ -14,7 +14,7 @@ const Pokemon = (props) => {
    setOpen(true)
   
   }
-console.log(pokemon.stats)
+
   
   return (
     <div className="card-container ">
@@ -35,7 +35,10 @@ console.log(pokemon.stats)
            
           }}
         >
+          {pokemon.sprites.front_default?
+          (
           <img alt={pokemon.name} src={pokemon.sprites.front_default} />
+          ):<img src={pokebola} alt={pokemon.name} className="h-[200px] w-[200px] p-4"/>}
           <div className="card-body">
             <div className="card-top">
               <h3>{pokemon.name}</h3>

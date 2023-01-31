@@ -4,29 +4,34 @@ import "./search.css";
 const Searchbar = (props) => {
   const [search, setSearch] = useState();
   const { onSearch } = props;
+  const exceptThisSymbols = ["."];
 
   const onChangeHandler = (e) => {
-    const result = (e.target.value.toLowerCase().replace(/[^a-z,0-9]/gi, ''));
-    setSearch(result)
+    const result = e.target.value.toLowerCase();
+    setSearch(result);
     if (e.target.value.length === 0) {
       onSearch(undefined);
     }
   };
 
   const onClickBtnHandler = () => {
-    if(search === ''){
+    if (search === "") {
       onSearch(undefined);
-    }else{
-    onSearch(search);
+    } else {
+      onSearch(search);
     }
   };
 
   return (
     <div className="searchbar-container">
       <div className="searchbar">
-        <input 
-         placeholder="Buscar Pokemon" 
-         onChange={onChangeHandler} />
+        <input
+          onKeyDown={(e) =>
+            exceptThisSymbols.includes(e.key) && e.preventDefault()
+          }
+          placeholder="Buscar Pokemon"
+          onChange={onChangeHandler}
+        />
       </div>
       <div className="searchbar-btn">
         <button onClick={onClickBtnHandler}>Buscar</button>
