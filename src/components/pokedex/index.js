@@ -1,10 +1,11 @@
-import React from "react";
+
 import Pagination from "../pagination";
 import Pokemon from "../Pokemon";
 import "./pokedex.css";
 
 const Pokedex = (props) => {
   const { pokemons, loading, page, totalPages, setPage } = props;
+ 
 
   const onLeftClickHandler = () => {
     if (page > 0) {
@@ -17,7 +18,7 @@ const Pokedex = (props) => {
     }
   };
   return (
-    <div>
+    <div className="pokedex-container">
       <div className="pokedex-header">
         <h1>Pokedex</h1>
         <Pagination

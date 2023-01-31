@@ -1,0 +1,92 @@
+.modal-background{
+  background-color: rgba(0, 0, 0, 0.342);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  display: flex;
+}
+
+.modal-container{
+  margin: 1rem;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 700px;
+  background-color: white;
+  border-radius: 25px;
+ 
+}
+
+.pokemon-name{
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.pokemon-type-text {
+  text-transform: capitalize;
+}
+.pokemon-modal-fire {
+  background-image: linear-gradient(  #eb4343 10%, rgb(255, 255, 255)) ;
+}
+.pokemon-modal-steel {
+  background-color: #4c91b2;
+}
+.pokemon-modal-ice {
+  background-color: #91d8df;
+}
+.pokemon-modal-fairy {
+  background-color: #eba8c3;
+}
+.pokemon-modal-psychic {
+  background-color: #ff6e68;
+}
+.pokemon-modal-rock {
+  background-color: #6f6e78;
+}
+.pokemon-modal-ghost {
+  background-color: #8571be;
+}
+.pokemon-modal-dragon {
+  background-color: #7383b9;
+}
+.pokemon-modal-dark {
+  background-color: #493f62;
+}
+.pokemon-modal-normal {
+  background-color: #b5b9c4;
+}
+.pokemon-modal-water {
+  background-color: #58abf6;
+}
+.pokemon-modal-grass {
+  background-color: #8bbe8a;
+}
+.pokemon-modal-poison {
+  background-color: #9f6e97;
+}
+.pokemon-modal-bug {
+  background-color: #4c8e38;
+}
+.pokemon-modal-electric {
+  background-color: #d9b549;
+}
+.pokemon-modal-fighting {
+  background-color: #ff4971;
+}
+.pokemon-modal-ground {
+  background-color: #f78551;
+}
+
+.stats-container{
+  background-color: green;
+
+ 
+}
