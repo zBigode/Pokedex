@@ -25,8 +25,8 @@ const Searchbar = (props) => {
   };
 
   return (
-    <div className="searchbar-container">
-      <div className="searchbar">
+    <div className="searchbar-container ">
+      <div className="searchbar ">
         <input
           onKeyDown={(e) =>
             exceptThisSymbols.includes(e.key) && e.preventDefault()
@@ -36,7 +36,7 @@ const Searchbar = (props) => {
         />
       </div>
       <div className="searchbar-btn">
-        <button onClick={onClickBtnHandler}>Buscar</button>
+        <button className=" flex items-center text-[20px] " onClick={onClickBtnHandler}>Buscar</button>
       </div>
     </div>
   );

@@ -18,11 +18,11 @@ const Pokedex = (props) => {
     }
   };
 
-  
+
   return (
     <div className="pokedex-container ">
       <div className="pokedex-header ">
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
         <Pagination
           page={page + 1}
           totalPages={totalPages}
