@@ -1,19 +1,22 @@
 import "./modal.css";
 import pokebola from "../../assets/pokebola.png";
 export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
-
+  
+  function lockScroll() {
+    closeModal(false);
+    document.body.style.overflow = "auto";
+  }
 
   return (
-    <div className="modal-background" id="overlay">
+    <div className="modal-background pr-4" id="overlay">
       <div className="modal-container" id="modal">
         <div
           className={`pokemon-modal-${pokemon.types[0].type.name}`}
           style={{ width: "100%", height: "100%", borderRadius: "25px" }}
         >
-
           <div className="header-modal">
             <button
-              onClick={() => closeModal(false)}
+              onClick={() => lockScroll()}
               className="text-[25px] ml-[95%]"
             >
               x
@@ -24,7 +27,6 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
 
           <div className="flex pl-[30%] items-center">
             <div>
-
               {imagem ? (
                 <img src={imagem} alt={name} className="w-[200px] h-[200px]" />
               ) : (
@@ -36,7 +38,6 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
               )}
 
               <div className="flex justify-center">
-
                 {pokemon.types.map((type, index) => {
                   return (
                     <div key={index} className="pokemon-type ">
@@ -55,13 +56,11 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
                           color: "white",
                         }}
                       >
-
                         {type.type.name}
                       </div>
                     </div>
                   );
                 })}
-
               </div>
             </div>
 
@@ -93,7 +92,7 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
               })}
             </div>
           </div>
-            <h2 className="text-[25px] pl-2">Habilidades:</h2>
+          <h2 className="text-[25px] pl-2">Habilidades:</h2>
           <div className="moves-pokemon">
             {pokemon.moves.map((move, index) => {
               return (

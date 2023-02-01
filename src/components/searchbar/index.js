@@ -7,16 +7,18 @@ const Searchbar = (props) => {
   const exceptThisSymbols = ["."];
 
   const onChangeHandler = (e) => {
+   
     const result = e.target.value.toLowerCase();
     setSearch(result);
     if (e.target.value.length === 0) {
       onSearch(undefined);
     }
-  };
+  }
 
   const onClickBtnHandler = () => {
     if (search === "") {
       onSearch(undefined);
+      
     } else {
       onSearch(search);
     }

@@ -89,18 +89,18 @@
 .stats-container {
   background-color: green;
 }
-.moves-pokemon{
+.moves-pokemon {
   height: 30%;
   overflow-y: scroll;
-
 }
+
 .moves-pokemon::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
 .moves-pokemon::-webkit-scrollbar-track {
-  background:transparent;
+  background: transparent;
 }
 
 /* Handle */
@@ -112,5 +112,4 @@
 /* Handle on hover */
 .moves-pokemon::-webkit-scrollbar-thumb:hover {
   background: #555;
- 
 }
