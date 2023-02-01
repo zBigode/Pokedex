@@ -1,7 +1,4 @@
-.pokemon-btn :hover {
-  opacity: 85%;
-  border-radius: 25px;
-}
+
 .pokemon-btn{
   border-radius: 25px;
 }
@@ -35,13 +32,13 @@
   align-items: center;
 }
 .card-top h2 {
-  font-size: 30px;
+  font-size: 30px auto;
   font-weight: bolder;
   color:white;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .card-top h3 {
-  font-size: 30px;
+  font-size: 30px auto;
   font-weight: bolder;
   color: rgb(226, 226, 226);
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);

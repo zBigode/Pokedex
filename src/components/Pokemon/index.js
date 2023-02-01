@@ -26,9 +26,9 @@ const Pokemon = (props) => {
             backgroundPosition: "center left",
             display: "flex",
             fontSize: "20px",
-            boxShadow: "6px 6px 6px rgba(0, 0, 0, 0.5)",
-            height: "200px",
-            width: "600px",
+            height: "150px",
+            width: "400px",
+            
           }}
         >
           {pokemon.sprites.front_default ? (
@@ -37,7 +37,7 @@ const Pokemon = (props) => {
             <img
               src={pokebola}
               alt={pokemon.name}
-              className="h-[200px] w-[200px] p-4"
+              className="h-[100%] w-[100%]] p-4"
             />
           )}
           <div className="card-body">
@@ -56,15 +56,18 @@ const Pokemon = (props) => {
                         borderRadius: "25px",
                         alignItems: "center",
                         textAlign: "center",
-                        height: "45px",
-                        width: "100px",
+                        height: "30px",
+                        width: "70px",
                         marginRight: "6px",
                         display: "flex",
                         justifyContent: "center",
                         color: "white",
+                        marginTop: "60%",
                       }}
                     >
+                      <div className="text-[15px]">
                       {type.type.name}
+                      </div>
                     </div>
                   </div>
                 );
