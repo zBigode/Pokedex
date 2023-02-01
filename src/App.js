@@ -18,6 +18,7 @@ function App() {
   const fetchPokemons = async () => {
     try {
       setLoading(true);
+      setNotFound(false)
       const data = await getPokemons(itensPerPage, itensPerPage * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
