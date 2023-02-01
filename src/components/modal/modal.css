@@ -94,6 +94,7 @@
   overflow-y: scroll;
 
 }
+
 .moves-pokemon::-webkit-scrollbar {
   width: 10px;
 }

@@ -2,7 +2,10 @@ import "./modal.css";
 import pokebola from "../../assets/pokebola.png";
 export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
 
-
+function lockScroll(){
+  closeModal(false)
+  document.body.style.overflow = 'auto'
+}
   return (
     <div className="modal-background" id="overlay">
       <div className="modal-container" id="modal">
@@ -13,7 +16,7 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
 
           <div className="header-modal">
             <button
-              onClick={() => closeModal(false)}
+              onClick={() => lockScroll()}
               className="text-[25px] ml-[95%]"
             >
               x

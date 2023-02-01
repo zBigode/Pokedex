@@ -8,14 +8,12 @@ import ModalPokemon from "../modal/modal";
 const Pokemon = (props) => {
   const { pokemon } = props;
   const [open, setOpen] = useState(false);
-
-
+  
   function openModal(){
-   setOpen(true)
-  
+    setOpen(true)  
+      document.body.style.overflow = 'hidden'
   }
-
-  
+     
   return (
     <div className="card-container ">
       <button onClick={() => openModal()} className="pokemon-btn">
