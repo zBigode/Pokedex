@@ -16,12 +16,7 @@ const Searchbar = (props) => {
   }
 
   const onClickBtnHandler = () => {
-    if (search === "") {
-      onSearch(undefined);
-      
-    } else {
-      onSearch(search);
-    }
+    onSearch(search)
   };
 
   return (
