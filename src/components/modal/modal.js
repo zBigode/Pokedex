@@ -25,7 +25,7 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
 
           <h1 className="pokemon-name">{name}</h1>
 
-          <div className="flex pl-[30%] items-center">
+          <div className="flex pl-[10%] items-center">
             <div>
               {imagem ? (
                 <img src={imagem} alt={name} className="w-[200px] h-[200px]" />
@@ -92,12 +92,12 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
               })}
             </div>
           </div>
-          <h2 className="text-[25px] pl-2">Habilidades:</h2>
+          <h2 className="text-[25px] pl-2 ">Habilidades:</h2>
           <div className="moves-pokemon">
             {pokemon.moves.map((move, index) => {
               return (
-                <div key={index} className="pokemon-type ">
-                  <div className="bg-slate-300 h-[40px] p-2 m-2 rounded-xl flex justify-center text-[22px]">
+                <div key={index} className="h-10 flex justify-center m-2">
+                  <div className="bg-slate-300 h-[40px] p-2 m-2 rounded-xl flex justify-center w-[500px] text-[22px]">
                     {move.move.name}
                   </div>
                 </div>
