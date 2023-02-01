@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Pokedex from "./components/pokedex";
 import Searchbar from "./components/searchbar";
+import notfound from "./assets/notfound.jpg";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -51,25 +52,36 @@ function App() {
     }
     setLoading(false);
   };
+
   return (
-    <div className="pl-2 pb-4 bg-slate-400 ">
-      <Navbar />
+    <div className="  bg-slate-400 ">
+      <div className="pl-2 pr-2 ">
+        <Navbar />
 
-      <Searchbar onSearch={onSearchHandler} />
-      {notFound ? (
-
-        <div className="text-[25px] flex justify-center">Não foi possivel encontrar o pokemon </div>
-      
-        
-      ) : (
-        <Pokedex
-          pokemons={pokemons}
-          loading={loading}
-          page={page}
-          totalPages={totalPages}
-          setPage={setPage}
-        />
-      )}
+        <Searchbar onSearch={onSearchHandler} />
+        {notFound ? (
+          <div className="w-full h-full">
+            <div className="text-[25px] flex justify-center">
+              Não foi possivel encontrar o pokemon
+            </div>
+            <div className="w-full h-full">
+              <img
+                className="w-full h-full  opacity-60"
+                src={notfound}
+                alt="notfound"
+              />
+            </div>
+          </div>
+        ) : (
+          <Pokedex
+            pokemons={pokemons}
+            loading={loading}
+            page={page}
+            totalPages={totalPages}
+            setPage={setPage}
+          />
+        )}
+      </div>
     </div>
   );
 }

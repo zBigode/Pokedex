@@ -1,19 +1,18 @@
 import "./pokemon.css";
 import Fundo from "../../assets/fundo.svg";
-import pokebola from "../../assets/pokebola.png"
+import pokebola from "../../assets/pokebola.png";
 import React, { useState } from "react";
 import ModalPokemon from "../modal/modal";
-
 
 const Pokemon = (props) => {
   const { pokemon } = props;
   const [open, setOpen] = useState(false);
-  
-  function openModal(){
-    setOpen(true)  
-      document.body.style.overflow = 'hidden'
+
+  function openModal() {
+    setOpen(true);
+    document.body.style.overflow = "hidden";
   }
-     
+
   return (
     <div className="card-container ">
       <button onClick={() => openModal()} className="pokemon-btn">
@@ -30,13 +29,17 @@ const Pokemon = (props) => {
             boxShadow: "6px 6px 6px rgba(0, 0, 0, 0.5)",
             height: "200px",
             width: "600px",
-           
           }}
         >
-          {pokemon.sprites.front_default?
-          (
-          <img alt={pokemon.name} src={pokemon.sprites.front_default} />
-          ):<img src={pokebola} alt={pokemon.name} className="h-[200px] w-[200px] p-4"/>}
+          {pokemon.sprites.front_default ? (
+            <img alt={pokemon.name} src={pokemon.sprites.front_default} />
+          ) : (
+            <img
+              src={pokebola}
+              alt={pokemon.name}
+              className="h-[200px] w-[200px] p-4"
+            />
+          )}
           <div className="card-body">
             <div className="card-top">
               <h3>{pokemon.name}</h3>
@@ -69,16 +72,19 @@ const Pokemon = (props) => {
             </div>
           </div>
         </div>
-        </button>
+      </button>
+      <div></div>
+      {open ? (
         <div>
-      </div>
-          {open ? <div>
-           
-            <ModalPokemon closeModal={setOpen} name={pokemon.name} imagem={pokemon.sprites.front_default} pokemon={pokemon}/>
-            </div> 
-            : null
-            }
+          <ModalPokemon
+            closeModal={setOpen}
+            name={pokemon.name}
+            imagem={pokemon.sprites.front_default}
+            pokemon={pokemon}
+          />
         </div>
+      ) : null}
+    </div>
   );
 };
 export default Pokemon;
