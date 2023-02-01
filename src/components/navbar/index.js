@@ -5,9 +5,11 @@ const Navbar = () => {
     "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png";
   return (
     <nav>
-      <div>
+      <button>
+      <a href="https://pokeapi.co/">
         <img className="navbar-img" src={logo_img} alt="logo" />
-      </div>
+        </a>
+      </button>
     </nav>
   );
 };
