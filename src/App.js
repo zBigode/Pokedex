@@ -8,7 +8,7 @@ import notfound from "./assets/notfound.jpg";
 
 function App() {
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [notFound, setNotFound] = useState(false);
@@ -48,7 +48,7 @@ function App() {
       setNotFound(true);
     } else {
       setPokemons([result]);
-      setPage(0);
+      setPage(1);
       setTotalPages(1);
     }
     setLoading(false);
