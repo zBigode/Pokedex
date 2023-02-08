@@ -8,17 +8,17 @@ import notfound from "./assets/notfound.jpg";
 
 function App() {
   const [page, setPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [pokemons, setPokemons] = useState([]);
   const [notFound, setNotFound] = useState(false);
+  const [pokemons, setPokemons] = useState([]);
 
   const itensPerPage = 27;
 
   const fetchPokemons = async () => {
     try {
       setLoading(true);
-      setNotFound(false)
+      setNotFound(false);
       const data = await getPokemons(itensPerPage, itensPerPage * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
@@ -27,7 +27,7 @@ function App() {
       const results = await Promise.all(promises);
       setPokemons(results);
       setLoading(false);
-      setTotalPages(Math.ceil(data.count / itensPerPage));
+      setTotalPages(Math.ceil(data.count / itensPerPage))
     } catch (error) {
       console.log("fetchPokemons error: ", error);
     }
@@ -38,22 +38,23 @@ function App() {
   }, [page]);
 
   const onSearchHandler = async (pokemon) => {
-    if (!pokemon) {
+    if(!pokemon) {
       return fetchPokemons();
     }
-    setLoading(true);
-    setNotFound(false);
-    const result = await searchPokemon(pokemon);
-    if (!result) {
-      setNotFound(true);
-    } else {
-      setPokemons([result]);
-      setPage(1);
-      setTotalPages(1);
-    }
-    setLoading(false);
-  };
 
+    setLoading(true)
+    setNotFound(false)
+    const result = await searchPokemon(pokemon)
+    if(!result) {
+      setNotFound(true)
+    } else {
+      setPokemons([result])
+      setPage(0)
+      setTotalPages(1)
+    }
+    setLoading(false)
+
+  }
   return (
     <div className="  bg-slate-400 ">
       <div className="pl-2 pr-2 ">
