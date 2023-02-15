@@ -12,7 +12,7 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
       <div className="modal-container" id="modal">
         <div
           className={`pokemon-modal-${pokemon.types[0].type.name}`}
-          style={{ width: "100%", height: "100%", borderRadius: "25px" }}
+          style={{ width: "100%", height: "600px", borderRadius: "25px" }}
         >
           <div className="header-modal">
             <button
@@ -96,8 +96,8 @@ export default function ModalPokemon({ closeModal, name, imagem, pokemon }) {
           <div className="moves-pokemon">
             {pokemon.moves.map((move, index) => {
               return (
-                <div key={index} className="h-10 flex justify-center m-2">
-                  <div className="bg-slate-300 h-[40px] p-2 m-2 rounded-xl flex justify-center w-[500px] text-[22px]">
+                <div key={index} className="h-[45%] flex justify-center m-2">
+                  <div className="bg-slate-300 h-[40px] p-2 m-2 rounded-xl flex justify-center w-[500px] text-[100%]">
                     {move.move.name}
                   </div>
                 </div>
