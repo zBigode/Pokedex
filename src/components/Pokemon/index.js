@@ -27,7 +27,7 @@ const Pokemon = (props) => {
             display: "flex",
             fontSize: "20px",
             height: "150px",
-            width: "400px",
+            width: "400px ",
             
           }}
         >

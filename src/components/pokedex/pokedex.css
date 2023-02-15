@@ -9,9 +9,10 @@
 }
 
 .pokedex-grid {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+ display: flex;
+ margin: 5;
+ flex-wrap: wrap; 
+ justify-content: space-around;
 }
 
 .pokedex-header h1 {
